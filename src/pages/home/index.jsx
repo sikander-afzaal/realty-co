@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import Services from "./Services";
 import Video from "./Video";
 
 const Index = () => {
@@ -6,6 +7,7 @@ const Index = () => {
     <>
       <Hero />
       <Video />
+      <Services />
     </>
   );
 };
