@@ -13,6 +13,9 @@
   .input {
     @apply text-gray text-sm font-normal border-none outline-none rounded-[5px] bg-[#f6f6f6] w-full h-[30px];
   }
+  .testimonial-heading {
+    @apply bg-brownGr text-transparent bg-clip-text font-semibold;
+  }
 }
 body {
   background-color: white;

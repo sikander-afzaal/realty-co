@@ -168,7 +168,7 @@ const Header = () => {
           <a
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="/blog"
+            href="#"
           >
             Blog
           </a>
