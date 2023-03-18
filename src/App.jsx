@@ -6,7 +6,6 @@ import Blog from "./pages/blog/index";
 const App = () => {
   return (
     <>
-      <Header />
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Blog />} path="/blog" />
