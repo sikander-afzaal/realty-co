@@ -16,6 +16,9 @@
   .testimonial-heading {
     @apply bg-brownGr text-transparent bg-clip-text font-semibold;
   }
+  .center-slides li {
+    @apply flex justify-center items-center;
+  }
 }
 body {
   background-color: white;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
@@ -100,13 +101,15 @@ const Header = () => {
           headerbg ? "bg-white" : "bg-transparent"
         } transition-all duration-300 flex justify-between items-center  w-full py-5 gap-5 px-5 lg:px-8`}
       >
-        <img
-          src="/logo.png"
-          className={`max-w-[180px] sm:max-w-full object-contain transition-all duration-300 ${
-            headerbg ? "invert" : "invert-0"
-          }`}
-          alt=""
-        />
+        <Link to={"/"}>
+          <img
+            src="/logo.png"
+            className={`max-w-[180px] sm:max-w-full object-contain transition-all duration-300 ${
+              headerbg ? "invert" : "invert-0"
+            }`}
+            alt=""
+          />
+        </Link>
         <nav
           className={`flex z-[91] gap-[30px] justify-start flex-col lg:flex-row pt-[5rem] pb-[3rem] px-[3rem] lg:p-0 bg-primary h-full lg:bg-transparent lg:h-auto  fixed top-0 lg:static lg:justify-center items-center sm:items-start lg:items-center w-full max-w-[450px] lg:max-w-[900px] overflow-y-auto lg:overflow-visible ${
             headerbg ? "text-black" : "text-white"
@@ -130,13 +133,13 @@ const Header = () => {
             />
           </svg>
 
-          <a
+          <Link
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="#"
+            to="/"
           >
             Home
-          </a>
+          </Link>
           <a
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
@@ -158,27 +161,27 @@ const Header = () => {
           >
             Landlords
           </a>
-          <a
+          <Link
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="#"
+            to="/testimonial"
           >
             Testimonial
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="#"
+            to="/blog"
           >
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="#"
+            to="/aboutus"
           >
             About
-          </a>
+          </Link>
           <div className="lg:hidden flex justify-center items-center gap-[30px]">
             <a href="#" target={"blank"}>
               <img

@@ -3,6 +3,9 @@ import Services from "./Services";
 import Video from "./Video";
 import Header from "../../layout/Header";
 import Articles from "./Articles";
+import Customer from "./Customer";
+import TenantFaq from "./TenantFaq";
+import LandlordFaq from "./LandlordFaq";
 
 const Index = () => {
   return (
@@ -12,6 +15,9 @@ const Index = () => {
       <Video />
       <Services />
       <Articles />
+      <Customer />
+      <TenantFaq />
+      <LandlordFaq />
     </>
   );
 };
