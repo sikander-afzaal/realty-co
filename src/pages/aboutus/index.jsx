@@ -1,5 +1,6 @@
 import React from "react";
 import AboutUsHeader from "./AboutUsHeader";
+import Contact from "./Contact";
 import OurTeam from "./OurTeam";
 
 const Index = () => {
@@ -7,6 +8,7 @@ const Index = () => {
     <div>
       <AboutUsHeader />
       <OurTeam />
+      <Contact />
     </div>
   );
 };

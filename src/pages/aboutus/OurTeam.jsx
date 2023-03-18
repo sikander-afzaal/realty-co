@@ -26,7 +26,7 @@ const members = [
 
 const OurTeam = () => {
   return (
-    <div className="wrapper px-16 gap-12 mt-[70px]">
+    <div className="wrapper px-4 sm:px-8 xl:px-16 gap-16 mt-[70px]">
       <div className="wrapper max-w-[1400px] gap-6">
         <h2 className="testimonial-heading text-3xl sm:text-4xl">Our Team</h2>
         <p className="text-lg sm:text-xl text-center text-blogPara">
@@ -41,9 +41,14 @@ const OurTeam = () => {
         </p>
       </div>
 
-      <div className="flex w-full gap-6">
-        {members.map(({ photo, memberName, role }) => (
-          <TeamMember photo={photo} memberName={memberName} role={role} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        {members.map(({ photo, memberName, role }, index) => (
+          <TeamMember
+            key={index}
+            photo={photo}
+            memberName={memberName}
+            role={role}
+          />
         ))}
       </div>
     </div>
