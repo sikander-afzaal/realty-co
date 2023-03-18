@@ -27,8 +27,8 @@ const otherBlogs = [
 const BlogDetails = () => {
   const [filter, setFilter] = useState("all");
   return (
-    <div className="wrapper mt-[70px] px-[30px] md:px-[50px] lg:px-[70px] xl:px-[100px]">
-      <div className="wrapper max-w-[1500px] gap-16">
+    <div className="wrapper mt-[70px] px-5 md:px-[50px] lg:px-[70px] xl:px-[100px]">
+      <div className="wrapper max-w-[1500px] gap-10">
         <div className="flex gap-8 xl:gap-16 w-full">
           <div
             className={`cursor-pointer text-xl font-semibold ${
@@ -71,7 +71,7 @@ const BlogDetails = () => {
             <p className="text-darkGray">May 25 2023 . 5 mins read</p>
           </div>
 
-          <div className="grid xl:grid-cols-blogCol justify-between gap-6">
+          <div className="grid xl:grid-cols-blogCol justify-between items-start gap-6">
             <div className="bg-lightGray px-4 md:px-6 xl:px-8 py-6 rounded-2xl flex flex-col gap-6">
               <img src="/blog-img.png" alt="interior design" />
               <div className="text-blogPara text-base md:text-lg font-medium">
@@ -119,12 +119,12 @@ const BlogDetails = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden">
+            <div className=" flex justify-start items-start flex-col w-full xl:overflow-x-visible overflow-x-hidden">
               <h2 className="font-bold text-navyBlue text-xl sm:text-2xl">
                 Recent Events
               </h2>
 
-              <div className="py-4 xl:p-8 flex xl:flex-col gap-6 md:gap-8 w-full overflow-auto">
+              <div className="py-4 xl:py-4 xl:px-0 pl-1 flex xl:flex-col gap-6 md:gap-8 w-full xl:overflow-visible overflow-x-auto">
                 {otherBlogs.map(({ img, alt, title }, index) => (
                   <OtherBlog key={index} img={img} alt={alt} title={title} />
                 ))}

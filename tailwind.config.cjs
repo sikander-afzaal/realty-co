@@ -12,6 +12,7 @@ module.exports = {
         hero: 'url("/hero-img.png")',
         blogBanner: 'url("/blog-banner.png")',
         aboutUsBanner: 'url("/aboutus-banner.png")',
+        find: 'url("/find-bg.png")',
         articleOverlay:
           "linear-gradient(180deg, rgba(59, 77, 129, 0) -12.86%, rgba(129, 59, 59, 0.5) 106.85%)",
       },

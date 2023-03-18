@@ -19,7 +19,10 @@
   .center-slides li {
     @apply flex justify-center items-center;
   }
+  body {
+    @apply bg-white;
+  }
 }
-body {
-  background-color: white;
+html {
+  scroll-behavior: smooth;
 }

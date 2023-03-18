@@ -6,6 +6,7 @@ import Articles from "./Articles";
 import Customer from "./Customer";
 import TenantFaq from "./TenantFaq";
 import LandlordFaq from "./LandlordFaq";
+import Find from "./Find";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Customer />
       <TenantFaq />
       <LandlordFaq />
+      <Find />
     </>
   );
 };

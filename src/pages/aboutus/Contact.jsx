@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="max-w-[1600px] px-6 xl:px-12 flex gap-6 mt-[100px] items-center flex-col xl:flex-row">
+    <div className="max-w-[1600px] px-5 xl:px-12 flex gap-6 mt-[100px] items-center flex-col xl:flex-row">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56647.74216285027!2d-122.44088585383308!3d37.76161346382989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1679161901339!5m2!1sen!2s"
         width="600"

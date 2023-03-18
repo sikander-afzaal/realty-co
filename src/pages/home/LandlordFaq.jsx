@@ -50,7 +50,7 @@ const LandlordFaq = () => {
     },
   ];
   return (
-    <div className="wrapper my-[60px] sm:my-[120px] ">
+    <div className="wrapper mt-[60px] sm:mt-[120px] ">
       <div className="py-10 w-full max-w-[1320px] bg-silver flex justify-center items-center flex-col rounded-[20px] px-5 lg:px-10">
         <h2 className="title text-mahroon">Landlord FAQ</h2>
         <div className="gap-5 lg:flex-row flex-col flex justify-start items-start w-full">
