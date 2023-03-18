@@ -1,5 +1,13 @@
+import BlogHeader from "./BlogHeader";
+import BlogDetails from "./BlogDetails";
+
 const Index = () => {
-  return <div>Index</div>;
+  return (
+    <>
+      <BlogHeader />
+      <BlogDetails />
+    </>
+  );
 };
 
 export default Index;
