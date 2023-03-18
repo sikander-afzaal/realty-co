@@ -11,6 +11,8 @@ module.exports = {
         brownGr: "linear-gradient(141.38deg, #A14A4A -3.23%, #4B0C0C 97.18%)",
         hero: 'url("/hero-img.png")',
         blogBanner: 'url("/blog-banner.png")',
+        articleOverlay:
+          "linear-gradient(180deg, rgba(59, 77, 129, 0) -12.86%, rgba(129, 59, 59, 0.5) 106.85%)",
       },
       colors: {
         mahroon: "#A14A4A",
