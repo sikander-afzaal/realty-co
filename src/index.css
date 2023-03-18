@@ -7,7 +7,13 @@
   .wrapper {
     @apply flex justify-start items-center flex-col w-full;
   }
+  .title {
+    @apply text-[30px] sm:text-[40px] lg:text-[52px] font-semibold;
+  }
+  .input {
+    @apply text-gray text-sm font-normal border-none outline-none rounded-[5px] bg-[#f6f6f6] w-full h-[30px];
+  }
 }
 body {
-  background-color: black;
+  background-color: white;
 }

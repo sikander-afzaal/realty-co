@@ -9,10 +9,14 @@ module.exports = {
       },
       backgroundImage: {
         brownGr: "linear-gradient(141.38deg, #A14A4A -3.23%, #4B0C0C 97.18%)",
+        hero: 'url("/hero-img.png")',
       },
       colors: {
         mahroon: "#A14A4A",
         primary: "#DBDFEC",
+        lightPurple: "#6E80B4",
+        darkBlue: "#2C3A61",
+        gray: "#889099",
       },
     },
   },

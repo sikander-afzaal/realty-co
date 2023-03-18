@@ -1,16 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
+  const [headerbg, setHeaderbg] = useState(false);
+  useEffect(() => {
+    const bg = () => {
+      if (window.scrollY > 0) {
+        setHeaderbg(true);
+      } else {
+        setHeaderbg(false);
+      }
+    };
+
+    window.addEventListener("scroll", bg);
+
+    return () => {
+      window.removeEventListener("scroll", bg);
+    };
+  }, []);
+
   return (
-    <header className="wrapper">
+    <header className={`wrapper fixed z-50 top-0 left-0`}>
       {headerToggle && (
         <div
           onClick={() => setHeaderToggle(false)}
-          className="lg:hidden cursor-pointer block bg-brownGr opacity-60 w-full h-full fixed top-0 left-0"
+          className="lg:hidden cursor-pointer z-[90] block bg-brownGr opacity-60 w-full h-full fixed top-0 left-0"
         ></div>
       )}
-      <div className="flex justify-end sm:justify-between lg:justify-end items-stretch border-b gap-[30px] border-solid border-primary py-[22px] px-5 lg:px-8 w-full">
+      <div
+        className={`${
+          headerbg ? "bg-brownGr" : "bg-transparent"
+        } transition-all duration-300 flex justify-end sm:justify-between lg:justify-end items-stretch border-b gap-[30px] border-solid border-primary py-[22px] px-5 lg:px-8 w-full`}
+      >
         <div className="hidden sm:flex justify-center items-center gap-[30px]">
           <div className="text-white flex justify-start items-center gap-3">
             <svg
@@ -74,14 +95,22 @@ const Header = () => {
           Portal Login/Application
         </button>
       </div>
-      <div className="flex justify-between items-center w-full py-5 gap-5 px-5 lg:px-8">
+      <div
+        className={`${
+          headerbg ? "bg-white" : "bg-transparent"
+        } transition-all duration-300 flex justify-between items-center  w-full py-5 gap-5 px-5 lg:px-8`}
+      >
         <img
           src="/logo.png"
-          className="max-w-[180px] sm:max-w-full object-contain"
+          className={`max-w-[180px] sm:max-w-full object-contain transition-all duration-300 ${
+            headerbg ? "invert" : "invert-0"
+          }`}
           alt=""
         />
         <nav
-          className={`flex gap-[30px] justify-start flex-col lg:flex-row pt-[5rem] pb-[3rem] px-[3rem] lg:p-0 bg-primary h-full lg:bg-transparent lg:h-auto  fixed top-0 lg:static lg:justify-center items-center sm:items-start lg:items-center w-full max-w-[450px] lg:max-w-[900px] overflow-y-auto lg:overflow-visible ${
+          className={`flex z-[91] gap-[30px] justify-start flex-col lg:flex-row pt-[5rem] pb-[3rem] px-[3rem] lg:p-0 bg-primary h-full lg:bg-transparent lg:h-auto  fixed top-0 lg:static lg:justify-center items-center sm:items-start lg:items-center w-full max-w-[450px] lg:max-w-[900px] overflow-y-auto lg:overflow-visible ${
+            headerbg ? "text-black" : "text-white"
+          } ${
             headerToggle ? "right-0" : "-right-[800px]"
           } transition-all duration-700`}
         >
@@ -103,49 +132,49 @@ const Header = () => {
 
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             Home
           </a>
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             Property Management
           </a>
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             Residential
           </a>
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             Landlords
           </a>
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             Testimonial
           </a>
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             Blog
           </a>
           <a
             onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-white"
+            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
             href="#"
           >
             About
