@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const HeaderDropdown = ({ dropText, dropItems }) => {
+const HeaderDropdown = ({ dropText, dropItems, setSidebar }) => {
   const [dropDown, setDropDown] = useState(false);
   return (
     <div className="relative lg:h-full flex-col gap-2 flex items-center w-full sm:w-auto sm:items-start lg:items-center">
@@ -28,6 +28,10 @@ const HeaderDropdown = ({ dropText, dropItems }) => {
           {dropItems.map((elem, idx) => {
             return (
               <Link
+                onClick={() => {
+                  setDropDown(false);
+                  setSidebar(false);
+                }}
                 key={idx + elem}
                 className="text-lg lg:text-sm  font-semibold text-black"
                 to={elem.url}

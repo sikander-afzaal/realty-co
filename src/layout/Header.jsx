@@ -153,6 +153,7 @@ const Header = () => {
               { name: "Residents Blogs", url: "/blog" },
               { name: "Residents FAQ", url: "/" },
             ]}
+            setSidebar={setHeaderToggle}
             dropText="Residential"
           />
           <HeaderDropdown
@@ -160,6 +161,7 @@ const Header = () => {
               { name: "Landlords Blogs", url: "/blog" },
               { name: "Landlords FAQ", url: "/" },
             ]}
+            setSidebar={setHeaderToggle}
             dropText="Landlords"
           />
           <HeaderDropdown
@@ -167,6 +169,7 @@ const Header = () => {
               { name: "Videos", url: "/testimonial" },
               { name: "Google / Yelps", url: "/testimonial" },
             ]}
+            setSidebar={setHeaderToggle}
             dropText="Testimonial"
           />
 
