@@ -1,5 +1,5 @@
 import { useState } from "react";
-import OtherBlog from "./OtherBlog";
+import OtherBlog from "../../components/OtherBlog";
 
 const otherBlogs = [
   {
@@ -28,12 +28,12 @@ const BlogDetails = () => {
   const [filter, setFilter] = useState("all");
   return (
     <div className="wrapper mt-[70px] px-5 md:px-[50px] lg:px-[70px] xl:px-[100px]">
-      <div className="wrapper max-w-[1500px] gap-10">
+      <div className="wrapper max-w-[1500px] gap-8 md:gap-12 xl:gap-16">
         <div className="flex gap-8 xl:gap-16 w-full">
           <div
             className={`cursor-pointer text-xl font-semibold ${
               filter === "all"
-                ? "border-b border-navyBlue bg-brownGr bg-clip-text text-transparent"
+                ? "border-b border-navyBlue bg-brownGr bg-clip-text text-transparent uppercase"
                 : "text-lightBlack opacity-70"
             }`}
             onClick={() => setFilter("all")}
@@ -43,7 +43,7 @@ const BlogDetails = () => {
           <div
             className={`cursor-pointer text-xl font-semibold ${
               filter === "residents"
-                ? "border-b border-navyBlue bg-brownGr bg-clip-text text-transparent"
+                ? "border-b border-navyBlue bg-brownGr bg-clip-text text-transparent uppercase"
                 : "text-lightBlack opacity-70"
             }`}
             onClick={() => setFilter("residents")}
@@ -53,7 +53,7 @@ const BlogDetails = () => {
           <div
             className={`cursor-pointer text-xl font-semibold ${
               filter === "landlords"
-                ? "border-b border-navyBlue bg-brownGr bg-clip-text text-transparent"
+                ? "border-b border-navyBlue bg-brownGr bg-clip-text text-transparent uppercase"
                 : "text-lightBlack opacity-70"
             }`}
             onClick={() => setFilter("landlords")}
@@ -63,12 +63,15 @@ const BlogDetails = () => {
         </div>
 
         <div className="w-full flex flex-col gap-6">
-          <div className="flex flex-col gap-4 xl:gap-6">
+          <div className="flex flex-col gap-4 xl:gap-4">
             <h2 className="text-navyBlue font-semibold leading-[1.2] text-2xl sm:text-3xl xl:text-4xl">
               10 Mistakes to Avoid in Bedroom Interior Design
             </h2>
-
-            <p className="text-darkGray">May 25 2023 . 5 mins read</p>
+            <p className="text-darkGray flex gap-3">
+              <span>May 25 2023</span>
+              <span>.</span>
+              <span>5 mins read</span>
+            </p>
           </div>
 
           <div className="grid xl:grid-cols-blogCol justify-between items-start gap-6">
@@ -120,9 +123,12 @@ const BlogDetails = () => {
             </div>
 
             <div className=" flex justify-start items-start flex-col w-full xl:overflow-x-visible overflow-x-hidden">
-              <h2 className="font-bold text-navyBlue text-xl sm:text-2xl">
-                Recent Events
-              </h2>
+              <div className="flex flex-col">
+                <h2 className="font-bold text-navyBlue text-xl sm:text-2xl">
+                  Recent Events
+                </h2>
+                <div className="w-3/5 h-[2px] bg-navyBlue"></div>
+              </div>
 
               <div className="py-4 xl:py-4 xl:px-0 pl-1 flex xl:flex-col gap-6 md:gap-8 w-full xl:overflow-visible overflow-x-auto">
                 {otherBlogs.map(({ img, alt, title }, index) => (

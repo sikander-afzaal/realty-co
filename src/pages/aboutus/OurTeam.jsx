@@ -1,5 +1,5 @@
 import React from "react";
-import TeamMember from "./TeamMember";
+import TeamMember from "../../components/TeamMember";
 
 const members = [
   {

@@ -25,10 +25,12 @@ module.exports = {
         darkGray: "#5F6765",
         lightGray: "#FAFAFA",
         silver: "#F8F8F8",
+        pagination: "#F3F3F3",
         darkSilver: "#434343",
         navyBlue: "#31374D",
         lightBlack: "#1B1D1F",
         blogPara: "#333333",
+        mediumGray: "#6D737A",
       },
       boxShadow: {
         thin: "1px 1px 10px rgba(0, 0, 0, 0.15);",
