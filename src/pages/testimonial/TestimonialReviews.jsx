@@ -54,7 +54,7 @@ const reviews = [
 
 const TestimonialReviews = () => {
   return (
-    <div className="wrapper mt-[40px] sm:mt-[60px] px-[25px] sm:px-[50px] xl:px-[88px] gap-6 sm:gap-10">
+    <div className="wrapper mt-[60px] px-[25px] sm:px-[50px] xl:px-[88px] gap-6">
       <h2 className="testimonial-heading text-3xl sm:text-4xl">Reviews</h2>
 
       <div className="grid grids-col-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">

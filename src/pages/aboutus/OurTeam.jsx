@@ -27,9 +27,9 @@ const members = [
 const OurTeam = () => {
   return (
     <div className="wrapper px-4 sm:px-8 xl:px-16 gap-16 mt-[70px]">
-      <div className="wrapper max-w-[1400px] gap-6">
+      <div className="wrapper max-w-[1400px] gap-2 sm:gap-4 xl:gap-6">
         <h2 className="testimonial-heading text-3xl sm:text-4xl">Our Team</h2>
-        <p className="text-lg sm:text-xl text-center text-blogPara">
+        <p className="text-lg leading-[1.5] sm:text-xl text-center text-blogPara">
           At Top Realty Co., we take pride in being a team of highly experienced
           individuals, each with 10+ years of expertise in real estate,
           mortgage, and law. We understand the importance of trust when it comes
