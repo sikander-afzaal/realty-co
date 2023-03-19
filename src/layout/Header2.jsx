@@ -29,7 +29,7 @@ const Header2 = () => {
         ></div>
       )}
       <div
-        className={`bg-brownGr transition-all duration-300 flex  justify-between  items-stretch border-b gap-[30px] border-solid border-primary py-[22px] px-5 lg:px-8 w-full`}
+        className={`bg-brownGr transition-all duration-300 flex  justify-between  items-stretch border-b gap-[30px] border-solid border-primary py-[15px] px-5 lg:px-8 w-full`}
       >
         <div className="hidden sm:flex justify-center items-center gap-[30px]">
           <div className="text-white flex justify-start items-center gap-3">
@@ -94,7 +94,7 @@ const Header2 = () => {
         </div>
       </div>
       <div
-        className={`bg-white transition-all duration-300 flex justify-between items-center  w-full py-5 gap-5 px-5 lg:px-8`}
+        className={`bg-white transition-all duration-300 flex justify-between items-center  w-full py-2 gap-5 px-5 lg:px-8`}
       >
         <Link to={"/"}>
           <img
