@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import HeaderDropdown from "../components/HeaderDropdown";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
@@ -99,7 +100,7 @@ const Header = () => {
       <div
         className={`${
           headerbg ? "bg-white" : "bg-transparent"
-        } transition-all duration-300 flex justify-between items-center  w-full py-5 gap-5 px-5 lg:px-8`}
+        } transition-all duration-300  flex justify-between items-stretch  w-full py-5 gap-5 px-5 lg:px-8`}
       >
         <Link to={"/"}>
           <img
@@ -115,7 +116,7 @@ const Header = () => {
             headerbg ? "text-black" : "text-white"
           } ${
             headerToggle ? "right-0" : "-right-[800px]"
-          } transition-all duration-700`}
+          } transition-all duration-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -147,27 +148,28 @@ const Header = () => {
           >
             Property Management
           </a>
-          <a
-            onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="#"
-          >
-            Residential
-          </a>
-          <a
-            onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            href="#"
-          >
-            Landlords
-          </a>
-          <Link
-            onClick={() => setHeaderToggle(false)}
-            className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
-            to="/testimonial"
-          >
-            Testimonial
-          </Link>
+          <HeaderDropdown
+            dropItems={[
+              { name: "Residents Blogs", url: "/blog" },
+              { name: "Residents FAQ", url: "/" },
+            ]}
+            dropText="Residential"
+          />
+          <HeaderDropdown
+            dropItems={[
+              { name: "Landlords Blogs", url: "/blog" },
+              { name: "Landlords FAQ", url: "/" },
+            ]}
+            dropText="Landlords"
+          />
+          <HeaderDropdown
+            dropItems={[
+              { name: "Videos", url: "/testimonial" },
+              { name: "Google / Yelps", url: "/testimonial" },
+            ]}
+            dropText="Testimonial"
+          />
+
           <Link
             onClick={() => setHeaderToggle(false)}
             className="text-lg lg:text-sm  font-semibold text-black lg:text-inherit"
