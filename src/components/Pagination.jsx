@@ -27,7 +27,7 @@ const Pagination = ({ totalPages, selectedPage }) => {
         return (
           <button
             key={index}
-            className={`w-[36px] sm:w-[44px] aspect-square grid place-items-center font-semibold rounded ${
+            className={`w-[36px] sm:w-[44px] aspect-square grid place-items-center font-semibold font-base rounded font-inter ${
               selectedPage === index + 1
                 ? "bg-brownGr text-white"
                 : "bg-pagination hover:bg-brownGr hover:text-white hover:opacity-60"
@@ -39,11 +39,11 @@ const Pagination = ({ totalPages, selectedPage }) => {
       })}
 
       <>
-        <div className="bg-pagination w-[36px] sm:w-[44px] aspect-square grid place-items-center font-semibold rounded">
+        <div className="bg-pagination w-[36px] sm:w-[44px] aspect-square grid place-items-center font-semibold rounded font-inter">
           ...
         </div>
 
-        <button className="bg-pagination w-[36px] sm:w-[44px] aspect-square grid place-items-center font-semibold rounded hover:bg-brownGr hover:text-white hover:opacity-60">
+        <button className="bg-pagination w-[36px] sm:w-[44px] aspect-square grid place-items-center font-semibold rounded hover:bg-brownGr font-inter hover:text-white hover:opacity-60">
           {totalPages}
         </button>
       </>

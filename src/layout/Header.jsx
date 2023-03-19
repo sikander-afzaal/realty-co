@@ -267,7 +267,7 @@ const Header = () => {
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke="white"
+          stroke={headerbg ? "black" : "white"}
           className="w-6 h-6 cursor-pointer lg:hidden block"
         >
           <path
